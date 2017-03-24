@@ -311,13 +311,12 @@ nav a{
     font: 60px 'Coolvetica', sans-serif;
     letter-spacing: 3px;
     color: #ffffff;
-    display: block;
     position: relative;
     white-space: nowrap;
   	overflow: hidden;
   	position: relative;
-  	left: 35%;
-  	top: 45px;
+  	left: 25%;
+  	top: 95px;
 }
 
 nav a:hover a:focus{
