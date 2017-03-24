@@ -1,0 +1,17 @@
+eventname
+maxpeople
+location
+exclusive
+description
+category
+tags
+requirements
+agerange
+invites
+notify
+cost
+photogallery
+startdate
+starttime
+enddate
+endtime
