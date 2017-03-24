@@ -120,7 +120,6 @@
   class="maps"
   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCYurfMWiLjTJt2x6UZXos79ZevoSxkdSo&q=Space+Needle,Seattle+WA">
 </iframe> -->
-    <h1>hi</h1>
 <a class="plus" href="newEvent.html"> </a>
 </body>
 </html> 
