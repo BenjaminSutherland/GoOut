@@ -1,0 +1,464 @@
+/* Sets size page, allows for relative sizes */
+html, body, div, h1, h2, h3, h4, h5, h6, p, center,
+ol, ul, li,
+footer, header,  nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	height: 100%;
+}
+
+body{
+	height: 100%;
+    width:100%;
+}
+
+nav{
+	height: 100%;
+	width: 0;
+    z-index:200;
+    position:fixed;
+    transition: 0.3s;
+
+}
+/* Image in sidebar */
+#sidenavEffect {
+    height: 101%;
+    background: rgba(0,0,0,0.7);
+    z-index:100;
+    position:fixed;
+    left:0;
+}
+/* Change sidebar size/padding on screens smaller than 450px */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/* Header style */
+header{
+	background: linear-gradient(to right, #007777, #003333 );
+	width: 100%;
+	height: 170px;
+	position: fixed;
+	z-index: 200;
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+}
+/* Style for facebook link in header  */
+header .fb{
+	height: 95px;
+	width: 100px;
+	top: 40px;
+	right: 40px;
+	position: absolute;
+}
+/* Style for image of button that extends sidebar */
+.hamburger
+{
+	height: 110px;
+	width: 120px;
+	position: relative;
+	top: 37.5px;
+	left: 50px;
+}
+#search, 
+#submit {
+}
+/* Searchbar styling */
+#search {
+	position:fixed;
+    height: 75px;
+    width: 60%;
+    font: 38px 'Coolvetica', sans-serif, darkgrey;
+    background: white;
+	top: 53px;
+	left: 20%;
+    padding-left: 95px;
+    border-radius: 35px;      
+}
+/* Submit area styling */
+#submit
+{       
+    background: url('Images/TextureMap.png') -460px 0px; 
+    height: 65px;
+    width: 67px;
+    margin-top: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 39px;
+    left: 22%;
+    border: none;
+}
+/* So that search bar doesnt change when entering something */
+#submit:active {       
+    background: white;
+    outline: none;        
+}
+#submit::-moz-focus-inner {
+       border: 0;  
+}
+/* Main style for event bubbles*/
+.event{
+	height: 300px;
+	border-radius: 35px;
+	width: 95%;
+	position: absolute;
+	left: 2.5%;
+	background: linear-gradient(to left, black, white) ;
+	color: white;
+	opacity: 1.0;
+
+}
+/* If making more bubbles increase top value by 330px from last bubble and change background image*/
+#ac{
+	top: 200px;
+	background-image: url('Images/ac.png');
+  	background-size: cover;
+}
+#beach{
+	top: 530px;
+	background-image: url('Images/Beach Watermark.jpg');
+  	background-size: cover;
+}
+/* Main title text in event bubble, dont change if putting into new bubble */
+h1.title{
+	font: 100px 'Coolvetica', sans-serif;
+	top: 60px;
+	left: 30px;
+	position: relative;
+	color: white;
+}
+/* Creates at bottom of event bubble gray bar, if adding to new bubble dont change */
+ul.info{
+	height: 60px;
+	width: 100%;
+	background-color: rgba(100, 100, 100, 0.7);
+	position:relative;
+	top: -60px;
+	border-bottom-left-radius: 35px;
+	border-bottom-right-radius: 35px;
+}
+/* Dont change if putting into new bubble */
+.info li{
+	float: left;
+	display:inline;
+	margin-top: 10px;
+	font: 30px 'Coolvetica', sans-serif;
+	letter-spacing: 1px;
+}
+
+/* Importing new font */
+@font-face {
+    font-family: 'Coolvetica';
+    src: url(coolvetica rg.ttf);
+}
+/* Adding the plus icon on the bottom right and picking the coordinates from the map */
+.plus{
+    background: url('Images/TextureMap.png') -40px -250px;
+    width: 160px;
+    height: 160px;
+    bottom: 20px;
+    border-radius: 15px;
+    right: 20px;
+    position: fixed;
+    z-index: 9;
+}
+/* Adding the group icon to the info event overview */
+.groupicon{
+    background: url('Images/TextureMap.png') -976px 0px;
+    width: 50px;
+    height: 51px;
+    top: -2px;
+    position: absolute;
+    left: 40px;
+}
+/* Adding the location icon to the info event overview */
+.locationicon{
+    background: url('Images/TextureMap.png') -887px 0px;
+    width: 20px;
+    height: 42px;
+    top: -2px;
+    position: absolute;
+    left: 195px;
+}
+/* Adding the calendar icon to the info event overview */
+.calendaricon{
+    background: url('Images/TextureMap.png') -920px 0px;
+    width: 50px;
+    height: 42px;
+    top: -2px;
+    position: absolute;
+    left: 540px;
+}
+/* Keeping the people number event overview element in a specific place in it's line */
+.groupnum{
+	position: absolute;
+	left: 90px;
+}
+/* Keeping the location overview element in a specific place in it's line */
+.location{
+	position: absolute;
+	left: 225px;
+}
+/* Keeping the date overview element in a specific place in it's line */
+.date{
+	position: absolute;
+	left: 600px;
+}
+
+.yes, .no, .maybe{
+    width: 130px;
+    height: 130px;
+    top: 60px;
+    border-radius: 65px;
+    right: 50px;
+    position: absolute;
+
+}
+
+#divID{
+	top: 860px;
+	background-image: url('Images/tramp.jpg');
+  	background-size: cover;
+}
+.yes{
+	background: url('Images/TextureMap.png') 0px 0px;
+}
+.no{
+	background: url('Images/TextureMap.png') -274px 0px;
+}
+.maybe{
+	background: url('Images/TextureMap.png') -137px 0px;
+}
+/* Image in sidebar */
+nav .home{
+	transition: 0.8s;
+	height: 20%;
+	width: 100%;
+	background: #003333;
+
+}
+nav .messages{
+	height: 20%;
+	width: 100%;
+	background: #004444;
+    transition: 0.8s;
+
+}
+nav .calender{
+	height: 20%;
+	width: 100%;
+	background: #005555;
+    transition: 0.8s;
+} 
+nav .friends{
+	height: 20%;
+	width: 100%;
+	background: #006666;
+    transition: 0.8s;
+
+}
+nav .settings{
+	height: 20%;
+	width: 100%;
+	background: #007777;
+    transition: 0.8s;
+
+}
+
+nav img{
+	width: 12.8%;
+	left: 15%;
+	top: 110px;
+
+}
+
+nav .homeimg{
+
+	background: url('Images/TextureMap.png') -540px -363px;
+	position: relative;
+}
+
+nav .messageimg{
+	background: url('Images/TextureMap.png') -540px -300px;
+	position: relative;
+}
+
+nav .calenderimg{
+    background: url('Images/TextureMap.png') -540px -93px;
+    position: relative;	
+
+}
+
+nav .friendsimg{
+    background: url('Images/TextureMap.png') -540px -190px;
+	position: relative;	
+
+}
+
+nav .settingimg{
+    background: url('Images/TextureMap.png') -540px 4px;
+	position: relative;
+		
+}
+
+/* Text in sidebar */
+nav a{
+    text-decoration: none;
+    font: 60px 'Coolvetica', sans-serif;
+    letter-spacing: 3px;
+    color: #ffffff;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+  	overflow: hidden;
+  	position: relative;
+  	left: 35%;
+  	top: 45px;
+}
+
+nav a:hover a:focus{
+    color: rgba(0,0,0,0.7);
+
+}
+#inputform{
+	top:200px;
+	margin: auto;
+	position: absolute;
+	width: 100%;
+	height: 1000px;
+	font-family: Coolvetica;
+	font-size: 30px;
+	font-style: italic;
+	line-height: 24px;
+	color: #808080;
+	text-decoration: none;
+	border-radius: 10px;
+	padding: 10px;
+}
+.formfieldhidden{
+    display: none;
+}
+.formfield{
+	width: 90%;
+	left: 5%;
+	height: 50px;
+	font-family: Coolvetica;
+	font-size: 50px;
+	line-height: 24px;
+	color: #808080;
+	position: relative;
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding:40px 5px 40px 15px;
+}
+.neweventHidden{
+	display:none;
+}
+.newevent{
+	position:absolute;
+	background:url('Images/TextureMap.png') -206px -250px;
+	width: 160px;
+    height: 160px;
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+    border:none;
+}
+label {
+    margin-bottom: 40px;
+    display: block;
+}
+formfield:focus { 
+    background-color: yellow;
+}
+
+.maps{
+	border:0;
+	z-index: 0;
+	position: fixed;
+	top: 170px;	
+	height: 600px;
+	width: 100%;
+}
+
+.deletediv{
+/*	position: absolute;
+	top: 800px;
+	left: 50px;
+	font-family: Coolvetica;
+	font-size: 50px;
+	line-height: 24px;
+	color: black;*/
+}
+
+#maincontent{
+	position: relative;
+	background: white;
+	top: 760px;
+	font-family: Coolvetica;
+	font-size: 50px;
+	line-height: 24px;
+	color: grey;
+	z-index: 10;
+	width: 100%;	
+}
+.nextpage{
+	position:absolute;
+	background:url('Images/TextureMap.png') -370px -250px;
+	width: 160px;
+    height: 160px;
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+    border:none;
+}
+.previouspage{
+	position:absolute;
+	background:url('Images/TextureMap.png') -370px -250px;
+	width: 160px;
+    height: 160px;
+    bottom: 20px;
+    left: 20px;
+    position: fixed;
+    border:none;
+    transform: rotate(180deg);
+}
+#category {
+    font-family: Coolvetica;
+    font-size: 50px;
+    line-height: 24px;
+    color: #808080;
+    padding: 0px 5px 0px 15;
+    height: 90px;
+}
+#category:invalid { 
+	color: #a9a9a9; 
+}
+#category option{
+	font-family: Coolvetica;
+    font-size: 24px;
+    line-height: 24px;
+    color: #808080;
+    padding: 0px 0px 0px 0px;
+	left: 0;
+	position: relative;
+	width: 100%;
+
+}
+
+#description{
+	height: 350px;
+    padding:40px 5px 40px 15px;
+ 	word-break: break-all;
+}
+
+#description::placeholder{
+	padding-top:400px;
+}
+.radioLabelHidden{
+    display:none;
+}
