@@ -462,3 +462,6 @@ formfield:focus {
 .radioLabelHidden{
     display:none;
 }
+.loginbackground{
+    background: url('Images/loginbackground.png');
+}
