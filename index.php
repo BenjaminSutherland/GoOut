@@ -1,6 +1,7 @@
 <html>
 <head>
-	<title>come out</title>
+	<title>come out</title>  
+    <base href="https://GoOut.ml">
 	<meta name="author" content="Antonio Pratas">
 	<link href="index.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="js/javascript.js"> </script>
